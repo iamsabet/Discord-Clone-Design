@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .sidebar{
+    @apply fixed top-0 left-0 h-screen w-16 flex flex-col
+    bg-white dark:bg-gray-900 shadow-lg
+    transition-all duration-300 ease-in-out origin-top
+    
+  }
+  .sidebar-icon {
+    @apply relative flex items-center justify-center 
+    h-12 w-12 mt-2 mb-2 mx-auto  
+  bg-gray-400 dark:bg-gray-800
+  hover:bg-green-400 hover:dark:bg-green-400
+  text-green-400 hover:text-white
+    hover:rounded-xl rounded-3xl
+    transition-all duration-300 ease-linear
+    cursor-pointer shadow-lg 
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
+    text-white bg-gray-900 
+    text-xs font-bold 
+    transition-all duration-100 scale-0 origin-left
+  }
+
+  .sidebar-hr {
+    @apply bg-gray-200 dark:bg-gray-800 
+    border border-gray-200 dark:border-gray-800 rounded-full
+    transition-all duration-300 ease-in-out
+    mx-2
+  }
+ 
+
+
+  .top-navigation {
+    @apply flex flex-row items-center justify-evenly
+    bg-gray-300 dark:bg-gray-700 bg-opacity-90
+    w-full h-16 m-0 p-0
+    shadow-lg
+    transition-all duration-300 ease-in-out
+  }
+  .top-nav-icon{
+    @apply text-gray-500
+    mr-3 ml-3
+    transition-all duration-300 ease-in-out
+    cursor-pointer
+  hover:text-pink-500
+    
+  }
+  .top-nav-icon:first{
+    @apply ml-auto mr-4
+  }
+
+  .title-hashtag {
+    @apply text-lg tracking-wider font-semibold text-gray-500
+    my-auto ml-2
+    
+  }
+  .title-text{
+    @apply text-xl text-gray-500 font-semibold
+    tracking-wider text-opacity-90
+    mr-auto ml-2 my-auto pb-0.5
+    transition duration-300 ease-in-out
+    
+  }
+  .search{
+    @apply w-1/5 flex items-center justify-start
+    min-w-fit
+    text-gray-500 
+    bg-gray-400 dark:bg-gray-600
+    px-2 h-9 mx-0 rounded-md shadow-md
+    transition duration-300 ease-in-out
+    
+  }
+  .search-input{
+    @apply w-full font-sans font-semibold
+    text-gray-600 dark:text-gray-400
+    placeholder-gray-500
+    bg-transparent outline-none
+    pl-1 rounded
+  }
+
+  .channel-bar{
+    @apply w-80 h-auto m-0 ml-16 
+    bg-gray-200 dark:bg-gray-800 
+    shadow-lg
+    transition-all duration-300 ease-in-out
+    
+  }
+  .channel-container{
+    @apply  flex flex-col justify-start items-center 
+    p-1 m-0
+  }
+  .channel-block{
+    @apply flex flex-col items-center justify-center
+    h-16 p-0 m-0
+    
+  }
+  .channel-block-text{
+    @apply text-lg tracking-wider font-bold
+    text-gray-600 dark:text-gray-400
+    mr-auto ml-4 my-auto
+    
+  }
+  .dropdown{
+    @apply w-full px-2 pb-2 m-0
+    transition duration-300 ease-in-out
+    
+  }
+  .dropdown-header{
+    @apply flex flex-row items-end justify-evenly
+    text-gray-500 cursor-pointer
+    
+  }
+  .dropdown-header-text{
+    @apply text-gray-500 text-opacity-90
+    text-lg font-semibold cursor-default
+  }
+  .dropdown-header-text-selected{
+    @apply text-blue-500 text-opacity-90 text-lg font-bold
+  }
+  .dropdown-selection{
+    @apply flex flex-row items-center justify-evenly
+    mt-1 mr-auto ml-2
+    transition duration-300 ease-in-out
+    cursor-pointer;
+  }
+  .dropdown-selection-text{
+    @apply mr-auto
+    text-gray-500 font-semibold tracking-wide
+    hover:text-pink-600
+    transition duration-300 ease-in-out
+    mb-0.5
+    cursor-pointer
+  }
+
+  
+  
+  .content-container{
+    @apply flex flex-col w-full h-full
+    bg-gray-300 dark:bg-gray-700
+    m-0 
+    overflow-hidden
+    transition-all duration-300 ease-in-out
+    
+  }
+  .content-list{
+    @apply w-full h-auto flex flex-col justify-start items-center
+    pb-16 pt-1
+  }
+  .post{
+    @apply w-full h-auto flex justify-evenly mx-auto my-2
+    px-10 pt-2
+  }
+  .avatar-wrapper{
+    @apply w-24 h-fit ml-auto
+  }
+  .avatar-circle{
+    @apply w-14 h-14 rounded-full 
+    bg-pink-600 text-black p-0 ml-auto mr-0
+    overflow-hidden
+    flex justify-center items-center
+    hover:text-white
+    transition duration-200 ease-in-out
+    cursor-pointer
+    shadow-md
+  }
+  .profile-image{
+    @apply w-full
+  }
+  .profile-text{
+    @apply w-full text-3xl text-center p-0 py-1.5
+    line-clamp-1 mr-0.5 mb-0.5
+    font-semibold
+  }
+  .post-content{
+    @apply w-full text-gray-900 dark:text-gray-100
+    px-9 py-0
+  }
+  .post-owner{
+    @apply w-full
+    mb-1
+  }
+  .owner-name{
+    @apply text-base font-semibold mr-3
+    transition duration-200 ease-in-out
+    cursor-pointer
+    hover:text-pink-500
+    tracking-wider
+  }
+  .timestamp{
+    @apply text-gray-500
+  }
+  .post-text{
+    @apply text-lg tracking-wide
+    transition duration-200 ease-in-out
+    text-justify
+  }
+
+  .bottom-bar{
+    @apply flex flex-row justify-between items-center
+    fixed left-88 bottom-3 right-10
+    rounded-lg shadow-lg
+    bg-gray-400 dark:bg-gray-600 px-2
+    h-12
+  }
+  .bottom-bar-input{
+    @apply w-full h-full bg-transparent
+    outline-none
+  text-gray-900 dark:text-gray-100
+  placeholder-gray-500
+  }
+}
+
+
+
+
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600
+}
+
+

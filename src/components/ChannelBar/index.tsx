@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { FaChevronDown, FaChevronRight, FaPlus } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import { RiHashtag } from "react-icons/ri";
+import CreateChannelButton from "./CreateChannelButton";
 const topics = ["Resident Evil", "react"];
 const questions = ["jit-compilation", "purge-files", "dark-mode"];
 const random = ["variants", "plugins"];
@@ -28,22 +29,12 @@ const Dropdown = ({ header, selections }: DropPropsType) => {
 
   return (
     <div className="dropdown">
-      <div
-        onClick={() => setExpanded(!expanded)}
-        className="dropdown-header group"
-      >
-        <ChevronIcon expanded={expanded} />
-        <h5
-          className={
-            "dropdown-header-text group-hover:text-gray-300 group-hover:text-opacity-100"
-          }
-        >
-          {header.toUpperCase()}
-        </h5>
-        <FaPlus
-          size="12"
-          className="text-accent text-opacity-90 ml-auto my-auto"
-        />
+      <div className="dropdown-header group mb-1">
+        <div className="flex w-full" onClick={() => setExpanded(!expanded)}>
+          <ChevronIcon expanded={expanded} />
+          <h5 className={"dropdown-header-text"}>{header.toUpperCase()}</h5>
+        </div>
+        <CreateChannelButton />
       </div>
 
       {expanded &&
@@ -58,17 +49,16 @@ interface chevronProps {
 }
 
 const ChevronIcon = ({ expanded }: chevronProps) => {
-  const chevClass =
-    "text-accent text-opacity-90 my-auto mr-1 group-hover:text-gray-300 group-hover:text-opacity-100";
-  return expanded ? (
-    <FaChevronDown size="8" className={chevClass} />
-  ) : (
-    <FaChevronRight size="8" className={chevClass} />
+  return (
+    <FaChevronDown
+      size="8"
+      className={`chevron ${expanded ? "rotate-0" : "-rotate-90"}`}
+    />
   );
 };
 const TopicSelection = ({ selection }: { selection: string }) => (
-  <div className="dropdown-selection">
-    <RiHashtag size="24" className="text-gray-400" />
+  <div className="dropdown-selection group">
+    <RiHashtag size="22" className="dropdown-selection-icon" />
     <h5 className="dropdown-selection-text">{selection}</h5>
   </div>
 );

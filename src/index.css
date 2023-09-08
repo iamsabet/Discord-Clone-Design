@@ -11,20 +11,20 @@
 
 @layer components {
   .sidebar{
-    @apply fixed top-0 left-0 h-screen flex flex-col pt-2 w-[72px]
+    @apply fixed top-0 left-0 h-screen flex flex-col pt-3 w-[72px]
     bg-white dark:bg-gray-900 shadow-lg
     transition-all duration-200 ease-in-out origin-top
     
   }
   .sidebar-group {
     @apply relative flex items-center justify-center 
-    h-12 w-full mx-auto mb-2
+    h-12 w-full mx-auto mb-2 cursor-pointer
   }
 
   .sidebar-icon{
     @apply  bg-gray-400 dark:bg-gray-800 w-12 h-12 mx-auto flex justify-center items-center
-    hover:bg-green-500 hover:dark:bg-green-500 text-green-500 hover:text-white 
-    hover:rounded-xl rounded-3xl
+    group-hover:bg-green-500 group-hover:dark:bg-green-500 text-green-500 group-hover:text-white 
+    group-hover:rounded-xl rounded-3xl
     transition-all duration-200 ease-linear
     cursor-pointer shadow-lg 
   }
@@ -38,7 +38,7 @@
 
   .sidebar-hr {
     @apply bg-gray-200 dark:bg-gray-800 mb-2
-    border border-gray-200 dark:border-gray-800 rounded-full
+    border-2 border-gray-200 dark:border-gray-800 rounded-full
     transition-all duration-200 ease-in-out
     w-1/2 mx-auto
   }
@@ -94,7 +94,7 @@
   }
 
   .channel-bar{
-    @apply w-80 h-auto m-0 ml-16 
+    @apply w-60 h-auto m-0 ml-[72px]
     bg-gray-200 dark:bg-gray-800 
     shadow-lg
     transition-all duration-200 ease-in-out
@@ -116,7 +116,7 @@
     
   }
   .dropdown{
-    @apply w-full px-2 pb-2 m-0
+    @apply w-full px-1 pb-2 m-0
     transition duration-200 ease-in-out
     
   }
@@ -126,37 +126,49 @@
     
   }
   .dropdown-header-text{
-    @apply text-gray-400 text-opacity-70 text-[13px] font-semibold cursor-pointer tracking-wide 
+    @apply dark:text-gray-400 text-gray-700 dark:text-opacity-70 text-[13px] font-semibold cursor-pointer tracking-wide
+    group-hover:dark:text-gray-300 group-hover:dark:text-opacity-100
+    group-hover:text-gray-900 text-opacity-100
   }
 
   .dropdown-selection{
-    @apply flex flex-row items-center justify-evenly
-    mt-1 mr-auto ml-2
-    transition duration-300 ease-in-out
+    @apply flex flex-row items-center justify-evenly gap-1
+    mr-auto py-1 px-1.5
+    transition duration-200 ease-in-out
+    bg-gray-900 dark:bg-gray-300 dark:bg-opacity-0 bg-opacity-0 hover:bg-opacity-10 hover:dark:bg-opacity-10 rounded-md
     cursor-pointer;
   }
   .dropdown-selection-text{
     @apply mr-auto
-    text-gray-500 font-semibold tracking-wide
-    hover:text-pink-600
+  dark:text-gray-500 text-gray-700
+  group-hover:dark:text-gray-300
+    group-hover:text-gray-900
+    font-semibold tracking-wide
     transition duration-200 ease-in-out
     mb-0.5
     cursor-pointer
-    text-[16px]
+    text-[15px]
   }
-
+  .dropdown-selection-icon{
+    @apply text-gray-600 dark:text-gray-400 dark:text-opacity-60
+  }
+  .chevron {
+    @apply transition-all duration-100 ease-in-out dark:text-gray-400 text-gray-700 dark:text-opacity-70 my-auto mr-1 
+    group-hover:dark:text-gray-300 group-hover:dark:text-opacity-100
+    group-hover:text-gray-900 text-opacity-100
+  }
   
   
   .content-container{
-    @apply flex flex-col w-full h-full
+    @apply flex flex-1 flex-col h-full
     bg-gray-300 dark:bg-gray-700
-    m-0 
+    m-0
     overflow-hidden
     transition-all duration-200 ease-in-out
     
   }
   .content-list{
-    @apply w-full h-auto flex flex-col justify-start items-center
+    @apply w-full h-full overflow-y-auto flex flex-col justify-start items-center
     pb-16 pt-1
   }
   .post{

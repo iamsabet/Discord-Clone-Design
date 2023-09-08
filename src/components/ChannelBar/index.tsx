@@ -29,14 +29,13 @@ const Dropdown = ({header, selections} : DropPropsType) => {
 
     return (
         <div className='dropdown'>
-            <div onClick={()=> setExpanded(!expanded)} className='dropdown-header'>
+            <div onClick={()=> setExpanded(!expanded)} className='dropdown-header group'>
                 <ChevronIcon expanded={expanded} />
-                <h5 className={
-                    expanded ? 'dropdown-header-text-selected' : 'dropdown-header-text'}
+                <h5 className={'dropdown-header-text group-hover:text-gray-300'}
                 >
                     {header}
                 </h5>
-                <FaPlus size='14' className='text-accent text-opacity-80 ml-auto my-auto' />
+                <FaPlus size='12' className='text-accent text-opacity-90 ml-auto my-auto' />
             </div>
 
             { expanded && 
@@ -52,11 +51,11 @@ interface chevronProps {
 }
 
 const ChevronIcon = ({expanded} : chevronProps) => {
-    const chevClass = 'text-accent text-opacity-80 my-auto mr-1';
+    const chevClass = 'text-accent text-opacity-90 my-auto mr-1';
     return expanded ? (
-      <FaChevronDown size='14' className={chevClass} />
+      <FaChevronDown size='8' className={chevClass} />
     ) : (
-      <FaChevronRight size='14' className={chevClass} />
+      <FaChevronRight size='8' className={chevClass} />
     );
   };
 const TopicSelection = ({ selection } : {selection:string}) => (

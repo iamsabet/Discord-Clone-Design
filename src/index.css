@@ -11,19 +11,21 @@
 
 @layer components {
   .sidebar{
-    @apply fixed top-0 left-0 h-screen w-16 flex flex-col
+    @apply fixed top-0 left-0 h-screen flex flex-col pt-2 w-[72px]
     bg-white dark:bg-gray-900 shadow-lg
-    transition-all duration-300 ease-in-out origin-top
+    transition-all duration-200 ease-in-out origin-top
     
   }
-  .sidebar-icon {
+  .sidebar-group {
     @apply relative flex items-center justify-center 
-    h-12 w-12 mt-2 mb-2 mx-auto  
-  bg-gray-400 dark:bg-gray-800
-  hover:bg-green-400 hover:dark:bg-green-400
-  text-green-400 hover:text-white
+    h-12 w-full mx-auto mb-2
+  }
+
+  .sidebar-icon{
+    @apply  bg-gray-400 dark:bg-gray-800 w-12 h-12 mx-auto flex justify-center items-center
+    hover:bg-green-500 hover:dark:bg-green-500 text-green-500 hover:text-white 
     hover:rounded-xl rounded-3xl
-    transition-all duration-300 ease-linear
+    transition-all duration-200 ease-linear
     cursor-pointer shadow-lg 
   }
 
@@ -31,14 +33,14 @@
     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
     text-white bg-gray-900 
     text-xs font-bold 
-    transition-all duration-100 scale-0 origin-left
+    transition-all duration-200 scale-0 origin-left
   }
 
   .sidebar-hr {
-    @apply bg-gray-200 dark:bg-gray-800 
+    @apply bg-gray-200 dark:bg-gray-800 mb-2
     border border-gray-200 dark:border-gray-800 rounded-full
-    transition-all duration-300 ease-in-out
-    mx-2
+    transition-all duration-200 ease-in-out
+    w-1/2 mx-auto
   }
  
 
@@ -48,12 +50,12 @@
     bg-gray-300 dark:bg-gray-700 bg-opacity-90
     w-full h-16 m-0 p-0
     shadow-lg
-    transition-all duration-300 ease-in-out
+    transition-all duration-200 ease-in-out
   }
   .top-nav-icon{
     @apply text-gray-500
     mr-3 ml-3
-    transition-all duration-300 ease-in-out
+    transition-all duration-200 ease-in-out
     cursor-pointer
   hover:text-pink-500
     
@@ -71,7 +73,7 @@
     @apply text-xl text-gray-500 font-semibold
     tracking-wider text-opacity-90
     mr-auto ml-2 my-auto pb-0.5
-    transition duration-300 ease-in-out
+    transition duration-200 ease-in-out
     
   }
   .search{
@@ -80,7 +82,7 @@
     text-gray-500 
     bg-gray-400 dark:bg-gray-600
     px-2 h-9 mx-0 rounded-md shadow-md
-    transition duration-300 ease-in-out
+    transition duration-200 ease-in-out
     
   }
   .search-input{
@@ -95,7 +97,7 @@
     @apply w-80 h-auto m-0 ml-16 
     bg-gray-200 dark:bg-gray-800 
     shadow-lg
-    transition-all duration-300 ease-in-out
+    transition-all duration-200 ease-in-out
     
   }
   .channel-container{
@@ -115,7 +117,7 @@
   }
   .dropdown{
     @apply w-full px-2 pb-2 m-0
-    transition duration-300 ease-in-out
+    transition duration-200 ease-in-out
     
   }
   .dropdown-header{
@@ -124,25 +126,23 @@
     
   }
   .dropdown-header-text{
-    @apply text-gray-500 text-opacity-90
-    text-lg font-semibold cursor-default
+    @apply text-gray-500 text-sm font-semibold cursor-pointer tracking-wide 
   }
-  .dropdown-header-text-selected{
-    @apply text-blue-500 text-opacity-90 text-lg font-bold
-  }
+
   .dropdown-selection{
     @apply flex flex-row items-center justify-evenly
     mt-1 mr-auto ml-2
-    transition duration-300 ease-in-out
+    transition duration-500 ease-in-out
     cursor-pointer;
   }
   .dropdown-selection-text{
     @apply mr-auto
     text-gray-500 font-semibold tracking-wide
     hover:text-pink-600
-    transition duration-300 ease-in-out
+    transition duration-200 ease-in-out
     mb-0.5
     cursor-pointer
+    text-[16px]
   }
 
   
@@ -152,7 +152,7 @@
     bg-gray-300 dark:bg-gray-700
     m-0 
     overflow-hidden
-    transition-all duration-300 ease-in-out
+    transition-all duration-200 ease-in-out
     
   }
   .content-list{

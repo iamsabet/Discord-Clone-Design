@@ -126,13 +126,13 @@
     
   }
   .dropdown-header-text{
-    @apply text-gray-500 text-sm font-semibold cursor-pointer tracking-wide 
+    @apply text-gray-400 text-opacity-70 text-[13px] font-semibold cursor-pointer tracking-wide 
   }
 
   .dropdown-selection{
     @apply flex flex-row items-center justify-evenly
     mt-1 mr-auto ml-2
-    transition duration-500 ease-in-out
+    transition duration-300 ease-in-out
     cursor-pointer;
   }
   .dropdown-selection-text{

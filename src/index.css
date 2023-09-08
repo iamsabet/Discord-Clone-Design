@@ -157,15 +157,12 @@
     group-hover:dark:text-gray-300 group-hover:dark:text-opacity-100
     group-hover:text-gray-900 text-opacity-100
   }
-  
-  
   .content-container{
     @apply flex flex-1 flex-col h-full
     bg-gray-300 dark:bg-gray-700
     m-0
     overflow-hidden
     transition-all duration-200 ease-in-out
-    
   }
   .content-list{
     @apply w-full h-full overflow-y-auto flex flex-col justify-start items-center

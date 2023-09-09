@@ -231,6 +231,33 @@
   text-gray-900 dark:text-gray-100
   placeholder-gray-500
   }
+
+
+  /* Server Actions Menu */
+
+  .server-actions-block{
+    @apply absolute top-14 left-2 right-2 z-10 bg-opacity-90 rounded-md
+    h-auto dark:bg-background-dark bg-background-light
+    dark:text-gray-400 dark:text-opacity-80 text-gray-800 px-2 text-[14px] font-semibold
+    py-1.5
+  }
+  .server-actions-block .list-group {
+    @apply border-b
+    border-gray-200 dark:border-gray-800 py-1
+  }
+  .server-actions-block .list-group:last-child{
+    @apply border-none
+  }
+  .list-group .action{
+    @apply py-1 px-2 rounded-md
+    transition-all duration-100 ease-in-out 
+    cursor-pointer hover:bg-indigo-500
+    hover:dark:text-gray-50 hover:dark:text-opacity-100 hover:text-gray-950
+  }
+
+  /* __________ */
+
+
 }
 
 

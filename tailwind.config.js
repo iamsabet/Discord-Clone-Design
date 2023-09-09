@@ -1,11 +1,24 @@
-/** @type {import('tailwindcss').Config} */
-import colors from 'tailwindcss/colors';
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: 'class', // class, 'media' or boolean
   theme: {
     extend: {
       colors: {
+        background : {
+          dark:"#111214",
+          light:"DDDCD9"
+        },
+        indigo: {
+          100: "#dee0fc",
+          200: "#bcc1fa",
+          300: "#9ba3f7",
+          400: "#7984f5",
+          500: "#5865f2",
+          600: "#4651c2",
+          700: "#353d91",
+          800: "#232861",
+          900: "#121430"
+        },
         gray: {
           900: '#202225',
           800: '#2f3136',

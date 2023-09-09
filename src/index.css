@@ -94,14 +94,15 @@
   }
 
   .channel-bar{
-    @apply w-60 h-full overflow-y-auto m-0 ml-[72px]
+    @apply w-60 h-full overflow-hidden m-0 ml-[72px]
     bg-gray-200 dark:bg-gray-800 
     shadow-lg
     transition-all duration-200 ease-in-out
     
   }
   .channel-container{
-    @apply  flex flex-col justify-start items-center 
+    @apply flex flex-col justify-start items-center h-full
+    overflow-y-auto
     p-1 m-0 py-4
   }
   .channel-block{
@@ -236,22 +237,41 @@
   /* Server Actions Menu */
 
   .server-actions-block{
-    @apply absolute top-14 left-2 right-2 z-10 bg-opacity-90 rounded-md
+    @apply absolute left-2 right-2 z-10 bg-opacity-90 rounded-md
     h-auto dark:bg-background-dark bg-background-light
-    dark:text-gray-400 dark:text-opacity-80 text-gray-800 px-2 text-[14px] font-semibold
+    dark:text-gray-400 px-2 text-[13px] font-medium
+    transition-all duration-150 ease-in-out
     py-1.5
   }
   .server-actions-block .list-group {
     @apply border-b
-    border-gray-200 dark:border-gray-800 py-1
+  border-gray-200 dark:border-gray-800 py-1
+    
   }
   .server-actions-block .list-group:last-child{
-    @apply border-none
+    @apply border-none pb-0
   }
   .list-group .action{
-    @apply py-1 px-2 rounded-md
+    @apply py-[6px] px-2 rounded-md
     transition-all duration-100 ease-in-out 
-    cursor-pointer hover:bg-indigo-500
+    cursor-pointer 
+    dark:text-opacity-80 text-gray-800  
+  dark:text-gray-400 
+    flex justify-between items-center
+    select-none
+  }
+  .list-group .action.action-normal{
+    @apply hover:bg-indigo-500 
+    hover:text-gray-50 hover:text-opacity-100
+  }
+  .list-group .action.action-red{
+    @apply text-red-600 text-opacity-100
+    hover:bg-red-600
+    hover:dark:text-gray-50 hover:dark:text-opacity-100
+  }
+  .list-group .action.action-indigo{
+    @apply text-indigo-300 
+    hover:bg-indigo-500
     hover:dark:text-gray-50 hover:dark:text-opacity-100 hover:text-gray-950
   }
 

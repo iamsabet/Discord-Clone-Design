@@ -7,7 +7,6 @@ const TopicSelection = ({ title, type }: ChannelType) => (
     ) : (
       <AiTwotoneSound size="20" className="dropdown-selection-icon ml-0.5" />
     )}
-
     <h5 className="dropdown-selection-text">{title}</h5>
   </div>
 );

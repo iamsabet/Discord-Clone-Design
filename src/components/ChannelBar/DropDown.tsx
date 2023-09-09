@@ -22,7 +22,9 @@ const Dropdown = ({ header, selections }: DropPropsType) => {
 
       {expanded &&
         selections &&
-        selections.map((selection) => <TopicSelection {...selection} />)}
+        selections.map((selection, index) => (
+          <TopicSelection key={selection.title + "-" + index} {...selection} />
+        ))}
     </div>
   );
 };

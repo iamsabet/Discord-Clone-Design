@@ -153,7 +153,7 @@
     @apply text-gray-600 dark:text-gray-400 dark:text-opacity-60
   }
   .chevron {
-    @apply transition-all duration-100 ease-in-out dark:text-gray-400 text-gray-700 dark:text-opacity-70 my-auto mr-1 
+    @apply transition-all duration-200 ease-in-out dark:text-gray-400 text-gray-700 dark:text-opacity-70 my-auto mr-1 
     group-hover:dark:text-gray-300 group-hover:dark:text-opacity-100
     group-hover:text-gray-900 text-opacity-100
   }

@@ -3,7 +3,7 @@ import { FaPlus } from "react-icons/fa6";
 const CreateChannelButton = () => {
   return (
     <div
-      className="ml-auto my-auto"
+      className="ml-auto my-auto mr-1"
       onClick={(_e) => {
         console.log("CreateChannel pressed");
       }}

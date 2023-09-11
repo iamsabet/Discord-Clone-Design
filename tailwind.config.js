@@ -6,7 +6,7 @@ export default {
       colors: {
         background : {
           dark:"#111214",
-          light:"DDDCD9"
+          light:"#DCDCDC"
         },
         indigo: {
           100: "#dee0fc",

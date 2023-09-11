@@ -11,7 +11,7 @@
 
 @layer components {
   .sidebar{
-    @apply fixed top-0 left-0 h-screen flex flex-col pt-3 w-[72px]
+    @apply relative top-0 left-0 h-screen flex flex-col pt-3 w-[72px]
     bg-white dark:bg-gray-900 shadow-lg
     transition-all duration-200 ease-in-out origin-top
     
@@ -30,10 +30,11 @@
   }
 
   .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
+    @apply absolute w-auto p-2 m-2 min-w-max left-16 rounded-md shadow-lg
     text-white bg-gray-900 
     text-xs font-bold 
     transition-all duration-200 scale-0 origin-left
+    z-50
   }
 
   .sidebar-hr {
@@ -94,7 +95,7 @@
   }
 
   .channel-bar{
-    @apply w-60 h-full overflow-hidden m-0 ml-[72px]
+    @apply w-60 h-full overflow-hidden m-0
     bg-gray-200 dark:bg-gray-800 
     shadow-lg
     transition-all duration-200 ease-in-out

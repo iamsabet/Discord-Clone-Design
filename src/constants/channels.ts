@@ -3,7 +3,7 @@ const topics: ChannelsListType = [
     { title: "react", type: "text" },
 ];
 const questions: ChannelsListType = [
-    { title: "jit-compilation", type: "text" },
+    { title: "jit-compilation-asdhgaskaskjhdhas", type: "text" },
     { title: "purge-files", type: "text" },
     { title: "dark-mode", type: "text" }
 ];

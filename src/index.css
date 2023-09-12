@@ -37,16 +37,12 @@
     z-50
   }
 
-  
-
   .sidebar-hr {
     @apply bg-gray-200 dark:bg-gray-800 mb-2
     border-2 border-gray-200 dark:border-gray-800 rounded-full
     transition-all duration-200 ease-in-out
     w-1/2 mx-auto
   }
- 
-
 
   .top-navigation {
     @apply flex flex-row items-center justify-evenly
@@ -134,6 +130,7 @@
     @apply dark:text-gray-400 text-gray-700 dark:text-opacity-70 text-[13px] font-semibold cursor-pointer tracking-wide
     group-hover:dark:text-gray-300 group-hover:dark:text-opacity-100
     group-hover:text-gray-900 text-opacity-100
+    text-ellipsis line-clamp-1
   }
 
   .dropdown-selection{
@@ -144,7 +141,7 @@
     cursor-pointer;
   }
   .dropdown-selection-text{
-    @apply mr-auto
+    @apply flex-1 w-full
   dark:text-gray-500 text-gray-700
   group-hover:dark:text-gray-300
     group-hover:text-gray-900
@@ -153,9 +150,13 @@
     mb-0.5
     cursor-pointer
     text-[15px]
+    text-ellipsis line-clamp-1
   }
   .dropdown-selection-icon{
-    @apply text-gray-600 dark:text-gray-400 dark:text-opacity-60
+    @apply text-gray-700 dark:text-gray-400 dark:text-opacity-60
+  }
+  .icon-colors{
+    @apply text-gray-700 dark:text-gray-400 dark:text-opacity-60 hover:dark:text-gray-50 hover:text-gray-900
   }
   .chevron {
     @apply transition-all duration-200 ease-in-out dark:text-gray-400 text-gray-700 dark:text-opacity-70 my-auto mr-1 

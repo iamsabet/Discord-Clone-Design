@@ -155,6 +155,7 @@
   .dropdown-selection-icon{
     @apply text-gray-700 dark:text-gray-400 dark:text-opacity-60
   }
+  
   .icon-colors{
     @apply text-gray-700 dark:text-gray-400 dark:text-opacity-60 hover:dark:text-gray-50 hover:text-gray-900
   }

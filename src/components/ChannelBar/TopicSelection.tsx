@@ -44,5 +44,4 @@ const TopicSelection = ({ title, type }: ChannelType) => (
     </div>
   </div>
 );
-
 export default TopicSelection;

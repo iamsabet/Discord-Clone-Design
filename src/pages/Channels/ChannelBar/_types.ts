@@ -8,4 +8,8 @@ type ServerOptionType = {
     group: number,
     actions: ServerActionItem[],
 }
+type ChannelSubPageProps = {
+    server_id: string;
+    channel_id: string;
+}
 type ServerOptionsType = ServerOptionType[]

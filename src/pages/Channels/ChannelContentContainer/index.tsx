@@ -1,10 +1,8 @@
-import TopNavigation from "../TopNavigation";
 import { BsPlusCircleFill } from "react-icons/bs";
 
 const ContentContainer = () => {
   return (
-    <div className="content-container">
-      <TopNavigation />
+    <>
       <div className="content-list">
         {postsGpt.map((item, index) => (
           <Post
@@ -17,7 +15,7 @@ const ContentContainer = () => {
         ))}
       </div>
       <BottomBar />
-    </div>
+    </>
   );
 };
 

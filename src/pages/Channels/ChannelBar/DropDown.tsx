@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CreateChannelButton from "./CreateChannelButton";
 import ChevronIcon from "./ChevronIcon";
-import TopicSelection from "./TopicSelection";
+import ChannelPageItem from "./ChannelPageItem";
 
 interface DropPropsType {
   header: string;
@@ -23,7 +23,7 @@ const Dropdown = ({ header, selections }: DropPropsType) => {
       {expanded &&
         selections &&
         selections.map((selection, index) => (
-          <TopicSelection key={selection.title + "-" + index} {...selection} />
+          <ChannelPageItem key={selection.title + "-" + index} {...selection} />
         ))}
     </div>
   );

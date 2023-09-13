@@ -1,6 +1,8 @@
-type ChannelType = {
+type ChannelItemType = {
     title: string,
     type: "text" | "voice"
+    link: string
+
 }
 
-type ChannelsListType = ChannelType[] 
+type ChannelsListType = ChannelItemType[] 

@@ -111,7 +111,7 @@
     select-none
   }
   .channel-block-text{
-    @apply text-base tracking-wider font-semibold
+    @apply text-[15px] tracking-wider font-semibold
     text-gray-600 dark:text-gray-400
     mr-auto ml-4 my-auto
     

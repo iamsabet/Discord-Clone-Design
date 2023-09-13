@@ -1,9 +1,10 @@
-import { serverOptions } from "../../constants";
-import { useChannelBarStore } from "../../store/ChannelBar.store";
+import { serverOptions } from "../../../constants";
+import { useChannelBarStore } from "../../../store/ChannelBar.store";
 
-const ServerActions = () => {
+const ServerActions = ({ server_id, channel_id }: ChannelSubPageProps) => {
   const { openServerMenuFlag, hideMutedChannels, toggleHideMutedChannales } =
     useChannelBarStore((state) => state);
+  console.log(server_id + " / " + channel_id);
   return (
     <div
       className={`server-actions-block ${

@@ -1,7 +1,8 @@
 import { FaChevronDown } from "react-icons/fa6";
-import { useChannelBarStore } from "../../../store/ChannelBar.store";
+
 import { IoMdClose } from "react-icons/io";
-const ChannelsHeader = () => {
+import { useChannelBarStore } from "../../../../store/ChannelBar.store";
+const ChannelsHeader = ({ server_id, channel_id }: ChannelSubPageProps) => {
   const { openServerMenuFlag, toggleOpenServerMenu } = useChannelBarStore(
     (state) => state
   );
@@ -12,9 +13,9 @@ const ChannelsHeader = () => {
         toggleOpenServerMenu();
       }}
     >
-      <h6 className="channel-block-text text-ellipsis line-clamp-1">
-        Server Name
-      </h6>
+      <p className="channel-block-text text-ellipsis line-clamp-1">
+        Server Name {server_id} / {channel_id}
+      </p>
       {openServerMenuFlag ? (
         <IoMdClose size="18" className={`chevron`} />
       ) : (

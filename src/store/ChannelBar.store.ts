@@ -15,8 +15,8 @@ const useChannelBarStore = create<ChannelStateType>()(
         (set) => ({
             openServerMenuFlag: false,
             toggleOpenServerMenu: () => set((state) => ({ openServerMenuFlag: !state.openServerMenuFlag })),
-            closeServerMenu: () => set((_state) => ({ openServerMenuFlag: false })),
-            openServerMenu: () => set((_state) => ({ openServerMenuFlag: true })),
+            closeServerMenu: () => set(() => ({ openServerMenuFlag: false })),
+            openServerMenu: () => set(() => ({ openServerMenuFlag: true })),
             hideMutedChannels: false,
             toggleHideMutedChannales: () => set((state) => ({ hideMutedChannels: !state.hideMutedChannels })),
         }),

@@ -4,7 +4,6 @@ import {
   BsGearFill,
   BsDiscord,
 } from "react-icons/bs";
-import { FaPoo } from "react-icons/fa";
 import SideBarItem from "./item/SideBarItem";
 
 const SideBar = () => {
